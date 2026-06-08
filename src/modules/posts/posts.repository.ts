@@ -34,3 +34,4 @@ export class PostsRepository {
         await this.postModel.delete(id);
     }
 }
+

@@ -11,3 +11,4 @@ import { Post } from './posts.model';
     providers: [PostsService, PostsRepository],
 })
 export class PostsModule {}
+

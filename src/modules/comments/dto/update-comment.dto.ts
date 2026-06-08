@@ -1,8 +1,10 @@
 import { IsString, IsOptional, IsNumber, Min, Max } from 'class-validator';
+import { IsTextRequiredForRating } from '../validators/is-text-required-for-rating.validator';
 
 export class UpdateCommentDto {
-    @IsString()
     @IsOptional()
+    @IsString()
+    @IsTextRequiredForRating()
     text?: string;
 
     @IsNumber()

@@ -10,3 +10,4 @@ export class UpdatePostDto {
     @IsOptional()
     text?: string;
 }
+

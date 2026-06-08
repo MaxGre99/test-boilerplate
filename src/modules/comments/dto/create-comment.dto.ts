@@ -1,12 +1,14 @@
-import { IsString, IsNotEmpty, IsNumber, Min, Max } from 'class-validator';
+import { IsString, IsNotEmpty, IsNumber, Min, Max, IsOptional } from 'class-validator';
+import { IsTextRequiredForRating } from '../validators/is-text-required-for-rating.validator';
 
 export class CreateCommentDto {
     @IsNumber()
     postId!: number;
 
+    @IsOptional()
     @IsString()
-    @IsNotEmpty()
-    text!: string;
+    @IsTextRequiredForRating()
+    text?: string;
 
     @IsNumber()
     @Min(1)
